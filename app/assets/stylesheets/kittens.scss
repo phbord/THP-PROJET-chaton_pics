@@ -1,0 +1,25 @@
+// Place all the styles related to the kittens controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.kitten-img {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.bd-placeholder-img {
+    height: 30rem;
+}
+
+.btn-admin {
+    text-decoration: none;
+}
+
+.card-avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.card-picture {
+    width: 8.5rem;
+}

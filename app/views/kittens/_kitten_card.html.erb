@@ -1,0 +1,23 @@
+<div class="card h-100">
+    <% if @kitten.picture.attached? %>
+        <%= image_tag @kitten.picture, alt: 'picture', class: 'w-100'%>
+    <% else %>
+        <%= image_tag @kitten.image_url, alt: 'picture', class: 'w-100'%>
+    <% end %>
+    <div class="card-body">
+        <h5 class="card-title"><%= @kitten.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Admin :</h6>
+        <p class="card-text"> some text </p>
+        <p class="card-text"> some other text </p>
+        <div class="mb-3 text-center">
+            <%= link_to "Voir", 
+                kitten_path(@kitten.id), 
+                class: "card-link btn btn-dark btn-sm me-1 my-1" %>
+            <%= button_to "Ajouter au panier", 
+                line_items_path, 
+                method: :post, 
+                params: {kitten_id: @kitten.id}, 
+                class: "btn btn-outline-primary btn-sm me-1 my-1" %>
+        </div>
+    </div>
+</div>
